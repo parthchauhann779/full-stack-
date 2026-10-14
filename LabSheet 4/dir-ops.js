@@ -1,0 +1,1 @@
+const fs=require("fs"); if(!fs.existsSync("uploads"))fs.mkdirSync("uploads"); for(let i=1;i<=3;i++)fs.writeFileSync(`uploads/file${i}.txt`,""); console.log(fs.readdirSync("uploads")); fs.unlinkSync("uploads/file1.txt"); console.log("After deletion:",fs.readdirSync("uploads"));

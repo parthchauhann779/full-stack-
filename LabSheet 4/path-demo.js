@@ -1,0 +1,1 @@
+const path=require("path"); const file="/home/user/data/report.pdf"; console.log("Directory:",path.dirname(file)); console.log("Base name:",path.basename(file)); console.log("Extension:",path.extname(file)); console.log("Resolved:",path.resolve("data/report.pdf"));

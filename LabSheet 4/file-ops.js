@@ -1,0 +1,1 @@
+const fs=require("fs"); fs.writeFileSync("student.txt","Name: YOUR NAME\nRoll Number: YOUR ROLL NUMBER\n"); fs.appendFileSync("student.txt","Course: B.Tech CSE\n"); console.log(fs.readFileSync("student.txt","utf8")); fs.renameSync("student.txt","profile.txt"); console.log("Renamed to profile.txt");

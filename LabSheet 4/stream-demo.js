@@ -1,0 +1,1 @@
+const fs=require("fs");fs.writeFileSync("large-file.txt",Array.from({length:50},(_,i)=>`This is line ${i+1}`).join("\n"));const stream=fs.createReadStream("large-file.txt",{encoding:"utf8",highWaterMark:64});stream.on("data",chunk=>console.log("Chunk size:",Buffer.byteLength(chunk)));stream.on("end",()=>console.log("Finished reading file"));
